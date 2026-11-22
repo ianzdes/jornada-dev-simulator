@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: br.com.devlife.systems.GerenciadorDeAcoesIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.183 s <<< FAILURE! -- in br.com.devlife.systems.GerenciadorDeAcoesIT
+br.com.devlife.systems.GerenciadorDeAcoesIT.cursoComDescontoDeveFicarDisponivel -- Time elapsed: 0.107 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: O curso deveria estar disponível com desconto de 50% ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at br.com.devlife.systems.GerenciadorDeAcoesIT.cursoComDescontoDeveFicarDisponivel(GerenciadorDeAcoesIT.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

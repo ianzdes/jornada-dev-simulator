@@ -7,11 +7,10 @@ import br.com.devlife.domain.enums.AreaAtuacao;
 import br.com.devlife.domain.enums.NivelCargo;
 
 import org.junit.jupiter.api.Test;
-
+import br.com.devlife.domain.Curso;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 public class GerenciadorDeAcoesIT {
 
     @Test
@@ -54,4 +53,40 @@ public class GerenciadorDeAcoesIT {
             )
         );
     }
+
+
+    @Test
+    void cursoComDescontoDeveFicarDisponivel() {
+
+        // Arrange - Preparar
+        Jogador jogador = new Jogador(
+            "Teste",
+            AreaAtuacao.BACKEND,
+            NivelCargo.ESTAGIARIO_INICIO
+        );
+
+        GerenciadorDeAcoes gerenciador =
+            new GerenciadorDeAcoes();
+
+        // O jogador fica com R$ 200
+        jogador.gastarDinheiro(300);
+
+        // Ativa o desconto de 50%
+        jogador.setTemDescontoCursos(true);
+
+        // Act - Executar
+        List<Curso> cursos =
+            gerenciador.getCursosDisponiveis(jogador);
+
+        boolean cursoDisponivel = cursos.stream()
+            .anyMatch(curso -> curso.getNome()
+                .equals("Técnicas de Negociação"));
+
+        // Assert - Verificar
+        assertTrue(
+            cursoDisponivel,
+            "O curso deveria estar disponível com desconto de 50%"
+        );
+    }
+
 }
