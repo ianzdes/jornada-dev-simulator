@@ -25,4 +25,42 @@ public class JogadorTest {
         // Assert - Verificar
         assertEquals(100, jogador.getEnergia());
     }
+
+
+    @Test
+    void energiaNaoDeveFicarNegativa() {
+
+        // Arrange - Preparar
+        Jogador jogador = new Jogador(
+            "Teste",
+            AreaAtuacao.BACKEND,
+            NivelCargo.ESTAGIARIO
+        );
+
+        // Act - Executar
+        jogador.alterarRecursoVital("energia", -150);
+
+        // Assert - Verificar
+        assertEquals(0, jogador.getEnergia());
+    }
+
+
+    @Test
+    void naoDeveGastarDinheiroSemSaldoSuficiente() {
+
+        // Arrange - Preparar
+        Jogador jogador = new Jogador(
+            "Teste",
+            AreaAtuacao.BACKEND,
+            NivelCargo.ESTAGIARIO
+        );
+
+        // Act - Executar
+        jogador.gastarDinheiro(600);
+
+        // Assert - Verificar
+        assertEquals(500.0, jogador.getDinheiro(), 0.001);
+    }
+
+
 }
