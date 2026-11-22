@@ -24,7 +24,7 @@ public class MotorDoJogoIT {
             "2\n1\n" + // estudar fundamentos sistemas operacionais. passa dois dias
             "2\n1\n" + // estudar pacote office passa dois dias tb
             "3\n1\n" + // pega a vaga estadio em suporte no dia 5
-            "7\n".repeat(24) + // finalizar o dia varias vezes ate chegar no dia 30
+            "7\n".repeat(25) + // finalizar o dia varias vezes ate chegar no dia 30
             "\n"; // recebeu o salario e da enter na tela 
 
         // simula o teclado + captura o que o jogo ta escrevendo no terminal
@@ -39,6 +39,7 @@ public class MotorDoJogoIT {
         // o jogo n tem opcao de sair e para quando a entrada acaba
         assertThrows(NoSuchElementException.class, motor::iniciar);
         String saida = saidaCapturada.toString(StandardCharsets.UTF_8);
+        saida = saida.replaceAll("\u001B\\[[0-9;]*m", "");
 
         // assert
         assertTrue(
@@ -47,12 +48,13 @@ public class MotorDoJogoIT {
         );
 
         assertTrue(
-            saida.contains("VOCÊ RECEBEU SEU SALÁRIO DE R$ 1200,00!"),
+            saida.contains("VOCÊ RECEBEU SEU SALÁRIO DE R$ 1200.00!"),
             "o salario deveria cair no dia 30"
         );
-
+        System.err.println("Saldo encontrado? " +
+            saida.contains("Dinheiro: R$ 1520.00"));
         assertTrue(
-            saida.contains("Dinheiro: R$ 1520,00"),
+            saida.contains("Dinheiro: R$ 1520.00"),
             "o saldo deveria ser 1520 (500 - 100 - 80 + salario de 1200)"
         );
     }
