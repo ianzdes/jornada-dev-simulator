@@ -63,4 +63,23 @@ public class JogadorTest {
     }
 
 
+
+    @Test
+    void naoDeveAdicionarDinheiroNegativo() {
+
+        // Arrange - Preparar
+        Jogador jogador = new Jogador(
+            "Teste",
+            AreaAtuacao.BACKEND,
+            NivelCargo.ESTAGIARIO
+        );
+
+        // Act - Executar
+        jogador.adicionarDinheiro(-100);
+
+        // Assert - Verificar
+        assertEquals(500.0, jogador.getDinheiro(), 0.001);
+    }
+
+
 }
