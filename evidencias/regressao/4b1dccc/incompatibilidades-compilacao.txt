@@ -1,0 +1,99 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper (file:/usr/share/maven/lib/guava.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------< [0;36mbr.com.devlife:jornada-dev-simulator[0;1m >----------------[m
+[[1;34mINFO[m] [1mBuilding jornada-dev-simulator 1.0-SNAPSHOT[m
+[[1;34mINFO[m]   from pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mjacoco:0.8.12:prepare-agent[m [1m(default)[m @ [36mjornada-dev-simulator[0;1m ---[m
+[[1;34mINFO[m] argLine set to -javaagent:/home/lduarte/.m2/repository/org/jacoco/org.jacoco.agent/0.8.12/org.jacoco.agent-0.8.12-runtime.jar=destfile=/home/lduarte/regressao-4b1dccc/target/jacoco.exec
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:resources[m [1m(default-resources)[m @ [36mjornada-dev-simulator[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/lduarte/regressao-4b1dccc/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.13.0:compile[m [1m(default-compile)[m @ [36mjornada-dev-simulator[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 13 source files with javac [debug target 17] to target/classes
+[[1;33mWARNING[m] location of system modules is not set in conjunction with -source 17
+  not setting the location of system modules may lead to class files that cannot run on JDK 17
+    --release 17 is recommended instead of -source 17 -target 17 because it sets the location of system modules automatically
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:testResources[m [1m(default-testResources)[m @ [36mjornada-dev-simulator[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/lduarte/regressao-4b1dccc/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mjornada-dev-simulator[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged dependency[m.
+[[1;34mINFO[m] Compiling 4 source files with javac [debug target 17] to target/test-classes
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] COMPILATION WARNING : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;33mWARNING[m] location of system modules is not set in conjunction with -source 17
+  not setting the location of system modules may lead to class files that cannot run on JDK 17
+    --release 17 is recommended instead of -source 17 -target 17 because it sets the location of system modules automatically
+[[1;34mINFO[m] 1 warning
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] COMPILATION ERROR : 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/domain/EventoTest.java:[18,17] cannot find symbol
+  symbol:   class Evento
+  location: class br.com.devlife.domain.EventoTest
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[30,24] cannot find symbol
+  symbol:   method getVagasDisponiveis(br.com.devlife.core.Jogador,int)
+  location: variable gerenciador of type br.com.devlife.systems.GerenciadorDeAcoes
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[33,27] cannot find symbol
+  symbol:   method getTituloVaga()
+  location: variable v of type br.com.devlife.domain.Vaga
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[40,24] cannot find symbol
+  symbol:   method jogadorTemRequisitosParaVaga(br.com.devlife.core.Jogador,br.com.devlife.domain.Vaga)
+  location: variable gerenciador of type br.com.devlife.systems.GerenciadorDeAcoes
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[51,24] cannot find symbol
+  symbol:   method jogadorTemRequisitosParaVaga(br.com.devlife.core.Jogador,br.com.devlife.domain.Vaga)
+  location: variable gerenciador of type br.com.devlife.systems.GerenciadorDeAcoes
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[75,16] cannot find symbol
+  symbol:   method setTemDescontoCursos(boolean)
+  location: variable jogador of type br.com.devlife.core.Jogador
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[82,37] cannot find symbol
+  symbol:   method getNome()
+  location: variable curso of type br.com.devlife.domain.Curso
+[[1;34mINFO[m] 7 errors 
+[[1;34mINFO[m] -------------------------------------------------------------
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;31mBUILD FAILURE[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  1.085 s
+[[1;34mINFO[m] Finished at: 2026-11-22T17:35:27-03:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;31mERROR[m] Failed to execute goal [32morg.apache.maven.plugins:maven-compiler-plugin:3.13.0:testCompile[m [1m(default-testCompile)[m on project [36mjornada-dev-simulator[m: [1;31mCompilation failure[m: Compilation failure: 
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/domain/EventoTest.java:[18,17] cannot find symbol
+[[1;31mERROR[m]   symbol:   class Evento
+[[1;31mERROR[m]   location: class br.com.devlife.domain.EventoTest
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[30,24] cannot find symbol
+[[1;31mERROR[m]   symbol:   method getVagasDisponiveis(br.com.devlife.core.Jogador,int)
+[[1;31mERROR[m]   location: variable gerenciador of type br.com.devlife.systems.GerenciadorDeAcoes
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[33,27] cannot find symbol
+[[1;31mERROR[m]   symbol:   method getTituloVaga()
+[[1;31mERROR[m]   location: variable v of type br.com.devlife.domain.Vaga
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[40,24] cannot find symbol
+[[1;31mERROR[m]   symbol:   method jogadorTemRequisitosParaVaga(br.com.devlife.core.Jogador,br.com.devlife.domain.Vaga)
+[[1;31mERROR[m]   location: variable gerenciador of type br.com.devlife.systems.GerenciadorDeAcoes
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[51,24] cannot find symbol
+[[1;31mERROR[m]   symbol:   method jogadorTemRequisitosParaVaga(br.com.devlife.core.Jogador,br.com.devlife.domain.Vaga)
+[[1;31mERROR[m]   location: variable gerenciador of type br.com.devlife.systems.GerenciadorDeAcoes
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[75,16] cannot find symbol
+[[1;31mERROR[m]   symbol:   method setTemDescontoCursos(boolean)
+[[1;31mERROR[m]   location: variable jogador of type br.com.devlife.core.Jogador
+[[1;31mERROR[m] /home/lduarte/regressao-4b1dccc/src/test/java/br/com/devlife/systems/GerenciadorDeAcoesIT.java:[82,37] cannot find symbol
+[[1;31mERROR[m]   symbol:   method getNome()
+[[1;31mERROR[m]   location: variable curso of type br.com.devlife.domain.Curso
+[[1;31mERROR[m] -> [1m[Help 1][m
+[[1;31mERROR[m] 
+[[1;31mERROR[m] To see the full stack trace of the errors, re-run Maven with the [1m-e[m switch.
+[[1;31mERROR[m] Re-run Maven using the [1m-X[m switch to enable full debug logging.
+[[1;31mERROR[m] 
+[[1;31mERROR[m] For more information about the errors and possible solutions, please read the following articles:
+[[1;31mERROR[m] [1m[Help 1][m http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

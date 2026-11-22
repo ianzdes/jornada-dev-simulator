@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: br.com.devlife.systems.MotorDoJogoIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.076 s <<< FAILURE! -- in br.com.devlife.systems.MotorDoJogoIT
+br.com.devlife.systems.MotorDoJogoIT.devePagarSalarioNoDia30AposContratacao -- Time elapsed: 0.049 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.util.NoSuchElementException> but was: <java.util.UnknownFormatConversionException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3128)
+	at br.com.devlife.systems.MotorDoJogoIT.devePagarSalarioNoDia30AposContratacao(MotorDoJogoIT.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: java.util.UnknownFormatConversionException: Conversion = 'D'
+	at java.base/java.util.Formatter$FormatSpecifier.conversion(Formatter.java:3069)
+	at java.base/java.util.Formatter$FormatSpecifier.<init>(Formatter.java:3125)
+	at java.base/java.util.Formatter$FormatSpecifierParser.parse(Formatter.java:2915)
+	at java.base/java.util.Formatter.parse(Formatter.java:2814)
+	at java.base/java.util.Formatter.format(Formatter.java:2744)
+	at java.base/java.util.Formatter.format(Formatter.java:2698)
+	at java.base/java.lang.String.format(String.java:4455)
+	at br.com.devlife.ui.TerminalUI.exibirDashboard(TerminalUI.java:59)
+	at br.com.devlife.systems.MotorDoJogo.iniciar(MotorDoJogo.java:35)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+
