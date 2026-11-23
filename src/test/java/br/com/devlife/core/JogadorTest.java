@@ -12,17 +12,14 @@ public class JogadorTest {
     @Test
     void energiaNaoDeveUltrapassar100() {
 
-        // Arrange - Preparar
         Jogador jogador = new Jogador(
             "Teste",
             AreaAtuacao.BACKEND,
             NivelCargo.ESTAGIARIO
         );
 
-        // Act - Executar
         jogador.alterarRecursoVital("energia", 50);
 
-        // Assert - Verificar
         assertEquals(100, jogador.getEnergia());
     }
 
@@ -30,17 +27,14 @@ public class JogadorTest {
     @Test
     void energiaNaoDeveFicarNegativa() {
 
-        // Arrange - Preparar
         Jogador jogador = new Jogador(
             "Teste",
             AreaAtuacao.BACKEND,
             NivelCargo.ESTAGIARIO
         );
 
-        // Act - Executar
         jogador.alterarRecursoVital("energia", -150);
 
-        // Assert - Verificar
         assertEquals(0, jogador.getEnergia());
     }
 
@@ -48,17 +42,14 @@ public class JogadorTest {
     @Test
     void naoDeveGastarDinheiroSemSaldoSuficiente() {
 
-        // Arrange - Preparar
         Jogador jogador = new Jogador(
             "Teste",
             AreaAtuacao.BACKEND,
             NivelCargo.ESTAGIARIO
         );
 
-        // Act - Executar
         jogador.gastarDinheiro(600);
 
-        // Assert - Verificar
         assertEquals(500.0, jogador.getDinheiro(), 0.001);
     }
 
@@ -67,17 +58,14 @@ public class JogadorTest {
     @Test
     void naoDeveAdicionarDinheiroNegativo() {
 
-        // Arrange - Preparar
         Jogador jogador = new Jogador(
             "Teste",
             AreaAtuacao.BACKEND,
             NivelCargo.ESTAGIARIO
         );
 
-        // Act - Executar
         jogador.adicionarDinheiro(-100);
 
-        // Assert - Verificar
         assertEquals(500.0, jogador.getDinheiro(), 0.001);
     }
 

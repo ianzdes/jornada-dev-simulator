@@ -10,10 +10,8 @@ public class EventoTest {
     @Test
     void naoDevePermitirEventoComCustoNegativo() {
 
-        // Arrange - Preparar
         double custoInvalido = -100.0;
 
-        // Act e Assert - Executar e verificar
         assertThrows(IllegalArgumentException.class, () -> {
             new Evento(
                 "Evento de Tecnologia",

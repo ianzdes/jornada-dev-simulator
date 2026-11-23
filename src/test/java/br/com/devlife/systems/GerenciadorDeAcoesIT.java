@@ -16,7 +16,6 @@ public class GerenciadorDeAcoesIT {
     @Test
     void jogadorDeveAtenderRequisitosAposAprenderHabilidades() {
 
-        // Arrange - Preparar
         Jogador jogador = new Jogador(
             "Teste",
             AreaAtuacao.BACKEND,
@@ -35,18 +34,16 @@ public class GerenciadorDeAcoesIT {
             .findFirst()
             .orElseThrow();
 
-        // Assert - Antes de aprender
+        
         assertFalse(
             gerenciador.jogadorTemRequisitosParaVaga(
                 jogador, vaga
             )
         );
 
-        // Act - Desenvolver habilidades
+
         jogador.aprenderOuMelhorarHabilidade("SO");
         jogador.aprenderOuMelhorarHabilidade("Pacote Office");
-
-        // Assert - Depois de aprender
         assertTrue(
             gerenciador.jogadorTemRequisitosParaVaga(
                 jogador, vaga
@@ -58,7 +55,7 @@ public class GerenciadorDeAcoesIT {
     @Test
     void cursoComDescontoDeveFicarDisponivel() {
 
-        // Arrange - Preparar
+    
         Jogador jogador = new Jogador(
             "Teste",
             AreaAtuacao.BACKEND,
@@ -68,13 +65,12 @@ public class GerenciadorDeAcoesIT {
         GerenciadorDeAcoes gerenciador =
             new GerenciadorDeAcoes();
 
-        // O jogador fica com R$ 200
+        
         jogador.gastarDinheiro(300);
 
-        // Ativa o desconto de 50%
+    
         jogador.setTemDescontoCursos(true);
 
-        // Act - Executar
         List<Curso> cursos =
             gerenciador.getCursosDisponiveis(jogador);
 
@@ -82,7 +78,7 @@ public class GerenciadorDeAcoesIT {
             .anyMatch(curso -> curso.getNome()
                 .equals("Técnicas de Negociação"));
 
-        // Assert - Verificar
+    
         assertTrue(
             cursoDisponivel,
             "O curso deveria estar disponível com desconto de 50%"
